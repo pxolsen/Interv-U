@@ -7,5 +7,5 @@ class FlashCard(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name="flashcards")
     answer = models.CharField(null=True, blank=True)
     favorite = models.BooleanField(default=False)
-    asked_in_interview = models.IntegerField(default=0)
+    asked_in_interview = models.BooleanField(default=False)
     forget = models.BooleanField(default=False)
