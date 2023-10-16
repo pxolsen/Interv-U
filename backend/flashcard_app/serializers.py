@@ -1,11 +1,13 @@
 from rest_framework.serializers import ModelSerializer, PrimaryKeyRelatedField
 from .models import FlashCard
-from client_app.models import Client
-from question_app.models import Question
+from client_app.serializers import Client, ClientSerializer
+from question_app.serializers import Question, QuestionSerializer
 
 class FlashCardSerializer(ModelSerializer):
-    client_id = PrimaryKeyRelatedField(queryset=Client.objects.all())
-    question_id = PrimaryKeyRelatedField(queryset=Question.objects.all())
+    # client = PrimaryKeyRelatedField(queryset=Client.objects.all())
+    # question = PrimaryKeyRelatedField(queryset=Question.objects.all())
+    client = ClientSerializer()
+    question = QuestionSerializer()
 
     class Meta:
         model = FlashCard

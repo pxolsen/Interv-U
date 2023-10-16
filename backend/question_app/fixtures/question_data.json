@@ -1,0 +1,35 @@
+[
+    {
+      "model": "question_app.question",
+      "pk": 1,
+      "fields": {
+        "text": "Question 1",
+        "upvotes": 12
+      }
+    },
+    {
+      "model": "question_app.question",
+      "pk": 2,
+      "fields": {
+        "text": "Question 2",
+        "upvotes": 25
+      }
+    },
+    {
+      "model": "question_app.question",
+      "pk": 3,
+      "fields": {
+        "text": "Question 3",
+        "upvotes": 37
+ 
+      }
+    },
+    {
+      "model": "question_app.question",
+      "pk": 4,
+      "fields": {
+        "text": "Question 4",
+        "upvotes": 25
+      }
+    }
+    ]
