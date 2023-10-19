@@ -7,6 +7,7 @@ import {
   Typography,
   Input,
   useTheme,
+  useMediaQuery,
 } from "@mui/material";
 
 const linkStyle = {
@@ -19,18 +20,22 @@ const linkStyle = {
 
 function NavBar() {
   const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMedScreen = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <AppBar>
       <Toolbar>
         <Link href="/" style={linkStyle}>
-          <Typography variant="h6" sx={{ marginRight: theme.spacing(2) }}>
+          <Typography variant="h5" sx={{ marginRight: theme.spacing(5) }}>
             Interv-U
           </Typography>
         </Link>
+        {isSmallScreen ? null : (
+          <>
         <Link href="/questions" style={linkStyle}>
           <Typography
             variant="subtitle1"
-            sx={{ marginRight: theme.spacing(2) }}
+            sx={{ marginRight: theme.spacing(3) }}
           >
             Questions
           </Typography>
@@ -38,24 +43,25 @@ function NavBar() {
         <Link href="/answers" style={linkStyle}>
           <Typography
             variant="subtitle1"
-            sx={{ marginRight: theme.spacing(2) }}
+            sx={{ marginRight: theme.spacing(3) }}
           >
             Answers
           </Typography>
         </Link>
-        <Link href="/profile" style={linkStyle}>
+        {/* <Link href="/profile" style={linkStyle}>
           <Typography
             variant="subtitle1"
             sx={{ marginRight: theme.spacing(2) }}
           >
             Profile
           </Typography>
-        </Link>
-        <Input
-          sx={{ marginLeft: "auto", bgcolor: "white" }}
-          placeholder="Search"
-        />
-        <Avatar sx={{ marginLeft: theme.spacing(2) }} />
+        </Link> */}
+        </>
+        )}
+        {isMedScreen ? null : (
+          <Input sx={{ bgcolor: 'white' }} placeholder="Search" />
+        )}
+        <Avatar sx={{ marginLeft: "auto"}} />
       </Toolbar>
     </AppBar>
   );
