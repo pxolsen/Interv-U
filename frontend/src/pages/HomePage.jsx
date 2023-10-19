@@ -23,11 +23,12 @@ function HomePage() {
           justifyContent="center"
           height="100vh"
           padding={theme.spacing(2)}
+          // marginTop={6}
         >
-          <Typography variant="h2" sx={{ mb: 2, textAlign: "center" }}>
+          <Typography variant="h2" sx={{ mb: 2, textAlign: "center", fontWeight: "bold"}}>
             Interv-U
           </Typography>
-          <Typography variant="h5" sx={{ textAlign: "center", mb: 2 }}>
+          <Typography variant="h5" sx={{ textAlign: "center", mb: 2, fontWeight: "bold" }}>
             A better way to prepare for the behavioral interview
           </Typography>
           <Button
@@ -47,8 +48,9 @@ function HomePage() {
           justifyContent="center"
           height="100vh"
           padding={theme.spacing(2)}
+          // marginTop={6}
         >
-          <ImageCarousel />
+          <ImageCarousel sx={{ height: "300px" }} />
         </Box>
       </Grid>
     </Grid>

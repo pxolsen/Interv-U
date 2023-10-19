@@ -26,7 +26,7 @@ function NavBar() {
     <AppBar>
       <Toolbar>
         <Link href="/" style={linkStyle}>
-          <Typography variant="h5" sx={{ marginRight: theme.spacing(5) }}>
+          <Typography variant="h5" sx={{ marginRight: theme.spacing(5), fontWeight: "bold", ml:3 }}>
             Interv-U
           </Typography>
         </Link>
@@ -59,7 +59,7 @@ function NavBar() {
         </>
         )}
         {isMedScreen ? null : (
-          <Input sx={{ bgcolor: 'white' }} placeholder="Search" />
+          <Input sx={{ bgcolor: 'white', pl:1 }} placeholder="Search" />
         )}
         <Avatar sx={{ marginLeft: "auto"}} />
       </Toolbar>
